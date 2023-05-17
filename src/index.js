@@ -1,23 +1,14 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
-import App from "./App"
 import reportWebVitals from "./reportWebVitals"
-import Registration from "./Registration"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Router from "./routes/router"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
-const router = createBrowserRouter([
-  {
-    path: "/registration",
-    element: <Registration />,
-  },
-])
-
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router />
   </React.StrictMode>
 )
 

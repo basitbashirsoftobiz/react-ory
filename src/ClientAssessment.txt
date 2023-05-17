@@ -1,0 +1,259 @@
+import StudentsPicker from "../components/StudentsPicker"
+import StudentsTable from "../components/StudentsTable"
+import {
+  fetchStudentData,
+  fetchSchoolData,
+  fetchLegalguardianData,
+} from "../utils"
+import { useReducer, useCallback, useEffect } from "react"
+
+const StudentsDataComponent = () => {
+  const [state, updateState] = useReducer(
+    (prev, current) => {
+      return {
+        ...prev,
+        ...current,
+      }
+    },
+    {
+      studentsData: [],
+      schoolsData: [],
+      legalguardiansData: [],
+      studentIds: [],
+    }
+  )
+
+  const fetchSchoolAndGuardianData = useCallback(async () => {
+    try {
+      const response = await Promise.all(
+        state.studentIds.map(async (id) => {
+          const studentData = await fetchStudentData(id)
+          let results = {}
+          for (const student of studentData) {
+            const { schoolId, legalguardianId } = student
+            const [schoolData, legalguardianData] = await Promise.all([
+              fetchSchoolData(schoolId),
+              fetchLegalguardianData(legalguardianId),
+            ])
+            results = { schoolData, legalguardianData, studentData }
+          }
+          return results
+        })
+      )
+
+      const schoolData = response.map((res) => res.schoolData)
+      const legalguardianData = response.map((res) => res.legalguardianData)
+      const studentData = response.map((res) => res.studentData)
+
+      updateState({
+        schoolsData: schoolData,
+        legalguardiansData: legalguardianData,
+        studentsData: studentData,
+      })
+    } catch (e) {
+      console.log(e.message)
+    }
+  }, [state.studentIds])
+
+  useEffect(() => {
+    if (state.studentIds.length > 0) {
+      fetchSchoolAndGuardianData()
+    }
+  }, [state.studentIds, fetchSchoolAndGuardianData])
+
+  const onStudentsPick = (ids) =>
+    updateState({
+      studentIds: ids,
+      schoolsData: [],
+      legalguardiansData: [],
+      studentsData: [],
+    })
+
+  return (
+    <>
+      <StudentsPicker onPickHandler={onStudentsPick} />
+      <StudentsTable
+        studentsData={studentsData}
+        schoolsData={schoolsData}
+        LegalguardiansData={legalguardiansData}
+      />
+    </>
+  )
+}
+
+export default StudentsDataComponent
+
+
+
+function ClientComponent() {
+  const [studentsData, setStudentsData] = useState([])
+  const [schoolsData, setSchoolsData] = useState([])
+  const [legalguardiansData, setLegalguardiansData] = useState([])
+
+  const onStudentsPick = async (studentIds) => {
+    console.time("fetch Client")
+    for (const studentId of studentIds) {
+      const studentData = await fetchStudentData(studentId)
+      setStudentsData([...studentsData, studentData])
+      for (const student of studentData) {
+        const { schoolId, legalguardianId } = student
+        const schoolData = await fetchSchoolData(schoolId)
+        setSchoolsData([...schoolsData, schoolData])
+        const legalguardianData = await fetchLegalGuardianData(legalguardianId)
+        setLegalguardiansData([...legalguardiansData, legalguardianData])
+      }
+    }
+    console.timeEnd("fetch Client")
+  }
+  const fetchS = () => {
+    onStudentsPick([1, 2, 10, 100, 11, 22, 33, 77, 98, 46, 32, 42, 12, 45, 76])
+    // onStudentsPick(getRandomIds())
+  }
+
+  return (
+    <>
+      <button onClick={fetchS}>Fetch Client</button>
+      <div>
+        {studentsData.map((student) => (
+          <div key={student?.id}>{JSON.stringify(student, null, 2)}</div>
+        ))}
+        {schoolsData.map((school) => (
+          <div key={school?.id}>{JSON.stringify(school, null, 2)}</div>
+        ))}
+        {legalguardiansData.map((guadian) => (
+          <div key={guadian?.id}>{JSON.stringify(guadian, null, 2)}</div>
+        ))}
+      </div>
+    </>
+  )
+}
+
+
+
+function OptimizedComponent() {
+  const [state, updateState] = useReducer(
+    (prev, current) => {
+      return {
+        ...prev,
+        ...current,
+      }
+    },
+    {
+      studentsData: [],
+      schoolsData: [],
+      legalguardiansData: [],
+      studentIds: [],
+    }
+  )
+
+  const fetchSchoolAndGuardianData = useCallback(async () => {
+    console.time("fetch Optimized")
+    try {
+      const response = await Promise.all(
+        state.studentIds.map(async (id) => {
+          const studentData = await fetchStudentData(id)
+          let results = {}
+          for (const student of studentData) {
+            const { schoolId, legalguardianId } = student
+            const [schoolData, legalguardianData] = await Promise.all([
+              fetchSchoolData(schoolId),
+              fetchLegalGuardianData(legalguardianId),
+            ])
+            results = { schoolData, legalguardianData, studentData }
+          }
+          return results
+        })
+      )
+
+      const schoolData = response.map((res) => res.schoolData)
+      const legalguardianData = response.map((res) => res.legalguardianData)
+      const studentData = response.map((res) => res.studentData)
+
+      updateState({
+        schoolsData: schoolData,
+        legalguardiansData: legalguardianData,
+        studentsData: studentData,
+      })
+    } catch (e) {
+      console.log(e.message)
+    }
+    console.timeEnd("fetch Optimized")
+  }, [state.studentIds])
+
+  useEffect(() => {
+    if (state.studentIds.length > 0) {
+      fetchSchoolAndGuardianData()
+    }
+  }, [state.studentIds, fetchSchoolAndGuardianData])
+
+  const onStudentsPick = (ids) =>
+    updateState({
+      studentIds: ids,
+      schoolsData: [],
+      legalguardiansData: [],
+      studentsData: [],
+    })
+
+  const fetchS = () => {
+    onStudentsPick([1, 2, 10, 100, 11, 22, 33, 77, 98, 46, 32, 42, 12, 45, 76])
+    // onStudentsPick(getRandomIds())
+  }
+
+  return (
+    <>
+      <button onClick={fetchS}>Fetch Optimized</button>
+      <div>
+        {state.studentsData.map((student) => (
+          <div key={student?.id}>{JSON.stringify(student, null, 2)}</div>
+        ))}
+        {state.schoolsData.map((school) => (
+          <div key={school?.id}>{JSON.stringify(school, null, 2)}</div>
+        ))}
+        {state.legalguardiansData.map((guadian) => (
+          <div key={guadian?.id}>{JSON.stringify(guadian, null, 2)}</div>
+        ))}
+      </div>
+    </>
+  )
+}
+
+
+
+
+async function fetchStudentData(id) {
+  const response = await fetch(`http://localhost:3001/student/?id=${id}`, {
+    cache: "no-cache",
+  }).then((res) => res.json())
+  return response
+}
+
+async function fetchSchoolData(id) {
+  const response = await fetch(`http://localhost:3001/school/?id=${id}`, {
+    cache: "no-cache",
+  }).then((res) => res.json())
+  return response
+}
+
+async function fetchLegalGuardianData(id) {
+  const response = await fetch(`http://localhost:3001/guardian/?id=${id}`, {
+    cache: "no-cache",
+  }).then((res) => res.json())
+  return response
+}
+
+function getRandomIds() {
+  const ids = Array.from({ length: 100 }, (_, i) => i)
+  const randomIds = []
+  while (randomIds.length < 40) {
+    const randomId = Math.floor(Math.random() * 100)
+    if (!randomIds.includes(ids[randomId])) {
+      randomIds.push(ids[randomId])
+    }
+  }
+  return randomIds
+}
+
+
+
+<ClientComponent />
+<OptimizedComponent />

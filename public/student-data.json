@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "name": "Student 1",
+    "schoolId": 1,
+    "legalguardianId": 2
+  },
+  {
+    "id": 2,
+    "name": "Student 2",
+    "schoolId": 5,
+    "legalguardianId": 5
+  },
+  {
+    "id": 3,
+    "name": "Student 3",
+    "schoolId": 9,
+    "legalguardianId": 8
+  },
+  {
+    "id": 4,
+    "name": "Student 4",
+    "schoolId": 10,
+    "legalguardianId": 3
+  },
+  {
+    "id": 5,
+    "name": "Student 5",
+    "schoolId": 10,
+    "legalguardianId": 8
+  },
+  {
+    "id": 6,
+    "name": "Student 6",
+    "schoolId": 6,
+    "legalguardianId": 5
+  },
+  {
+    "id": 7,
+    "name": "Student 7",
+    "schoolId": 9,
+    "legalguardianId": 2
+  },
+  {
+    "id": 8,
+    "name": "Student 8",
+    "schoolId": 7,
+    "legalguardianId": 3
+  },
+  {
+    "id": 9,
+    "name": "Student 9",
+    "schoolId": 6,
+    "legalguardianId": 9
+  },
+  {
+    "id": 10,
+    "name": "Student 10",
+    "schoolId": 5,
+    "legalguardianId": 5
+  },
+  {
+    "id": 11,
+    "name": "Student 11",
+    "schoolId": 6,
+    "legalguardianId": 10
+  },
+  {
+    "id": 12,
+    "name": "Student 12",
+    "schoolId": 1,
+    "legalguardianId": 9
+  },
+  {
+    "id": 13,
+    "name": "Student 13",
+    "schoolId": 2,
+    "legalguardianId": 3
+  },
+  {
+    "id": 14,
+    "name": "Student 14",
+    "schoolId": 1,
+    "legalguardianId": 5
+  },
+  {
+    "id": 15,
+    "name": "Student 15",
+    "schoolId": 4,
+    "legalguardianId": 6
+  },
+  {
+    "id": 16,
+    "name": "Student 16",
+    "schoolId": 5,
+    "legalguardianId": 5
+  },
+  {
+    "id": 17,
+    "name": "Student 17",
+    "schoolId": 7,
+    "legalguardianId": 9
+  },
+  {
+    "id": 18,
+    "name": "Student 18",
+    "schoolId": 6,
+    "legalguardianId": 1
+  },
+  {
+    "id": 19,
+    "name": "Student 19",
+    "schoolId": 3,
+    "legalguardianId": 6
+  },
+  {
+    "id": 20,
+    "name": "Student 20",
+    "schoolId": 10,
+    "legalguardianId": 3
+  },
+  {
+    "id": 21,
+    "name": "Student 21",
+    "schoolId": 7,
+    "legalguardianId": 10
+  },
+  {
+    "id": 22,
+    "name": "Student 22",
+    "schoolId": 5,
+    "legalguardianId": 8
+  },
+  {
+    "id": 23,
+    "name": "Student 23",
+    "schoolId": 9,
+    "legalguardianId": 5
+  },
+  {
+    "id": 24,
+    "name": "Student 24",
+    "schoolId": 8,
+    "legalguardianId": 2
+  },
+  {
+    "id": 25,
+    "name": "Student 25",
+    "schoolId": 5,
+    "legalguardianId": 2
+  },
+  {
+    "id": 26,
+    "name": "Student 26",
+    "schoolId": 7,
+    "legalguardianId": 10
+  },
+  {
+    "id": 27,
+    "name": "Student 27",
+    "schoolId": 2,
+    "legalguardianId": 5
+  },
+  {
+    "id": 28,
+    "name": "Student 28",
+    "schoolId": 5,
+    "legalguardianId": 2
+  },
+  {
+    "id": 29,
+    "name": "Student 29",
+    "schoolId": 7,
+    "legalguardianId": 5
+  },
+  {
+    "id": 30,
+    "name": "Student 30",
+    "schoolId": 1,
+    "legalguardianId": 8
+  },
+  {
+    "id": 31,
+    "name": "Student 31",
+    "schoolId": 7,
+    "legalguardianId": 9
+  },
+  {
+    "id": 32,
+    "name": "Student 32",
+    "schoolId": 6,
+    "legalguardianId": 10
+  },
+  {
+    "id": 33,
+    "name": "Student 33",
+    "schoolId": 8,
+    "legalguardianId": 3
+  },
+  {
+    "id": 34,
+    "name": "Student 34",
+    "schoolId": 6,
+    "legalguardianId": 5
+  },
+  {
+    "id": 35,
+    "name": "Student 35",
+    "schoolId": 7,
+    "legalguardianId": 8
+  },
+  {
+    "id": 36,
+    "name": "Student 36",
+    "schoolId": 1,
+    "legalguardianId": 1
+  },
+  {
+    "id": 37,
+    "name": "Student 37",
+    "schoolId": 6,
+    "legalguardianId": 5
+  },
+  {
+    "id": 38,
+    "name": "Student 38",
+    "schoolId": 7,
+    "legalguardianId": 4
+  },
+  {
+    "id": 39,
+    "name": "Student 39",
+    "schoolId": 9,
+    "legalguardianId": 10
+  },
+  {
+    "id": 40,
+    "name": "Student 40",
+    "schoolId": 1,
+    "legalguardianId": 1
+  },
+  {
+    "id": 41,
+    "name": "Student 41",
+    "schoolId": 2,
+    "legalguardianId": 3
+  },
+  {
+    "id": 42,
+    "name": "Student 42",
+    "schoolId": 6,
+    "legalguardianId": 4
+  },
+  {
+    "id": 43,
+    "name": "Student 43",
+    "schoolId": 7,
+    "legalguardianId": 7
+  },
+  {
+    "id": 44,
+    "name": "Student 44",
+    "schoolId": 5,
+    "legalguardianId": 4
+  },
+  {
+    "id": 45,
+    "name": "Student 45",
+    "schoolId": 6,
+    "legalguardianId": 6
+  },
+  {
+    "id": 46,
+    "name": "Student 46",
+    "schoolId": 1,
+    "legalguardianId": 10
+  },
+  {
+    "id": 47,
+    "name": "Student 47",
+    "schoolId": 7,
+    "legalguardianId": 1
+  },
+  {
+    "id": 48,
+    "name": "Student 48",
+    "schoolId": 10,
+    "legalguardianId": 5
+  },
+  {
+    "id": 49,
+    "name": "Student 49",
+    "schoolId": 5,
+    "legalguardianId": 2
+  },
+  {
+    "id": 50,
+    "name": "Student 50",
+    "schoolId": 1,
+    "legalguardianId": 4
+  },
+  {
+    "id": 51,
+    "name": "Student 51",
+    "schoolId": 9,
+    "legalguardianId": 6
+  },
+  {
+    "id": 52,
+    "name": "Student 52",
+    "schoolId": 8,
+    "legalguardianId": 7
+  },
+  {
+    "id": 53,
+    "name": "Student 53",
+    "schoolId": 3,
+    "legalguardianId": 5
+  },
+  {
+    "id": 54,
+    "name": "Student 54",
+    "schoolId": 2,
+    "legalguardianId": 9
+  },
+  {
+    "id": 55,
+    "name": "Student 55",
+    "schoolId": 2,
+    "legalguardianId": 4
+  },
+  {
+    "id": 56,
+    "name": "Student 56",
+    "schoolId": 5,
+    "legalguardianId": 4
+  },
+  {
+    "id": 57,
+    "name": "Student 57",
+    "schoolId": 3,
+    "legalguardianId": 6
+  },
+  {
+    "id": 58,
+    "name": "Student 58",
+    "schoolId": 2,
+    "legalguardianId": 9
+  },
+  {
+    "id": 59,
+    "name": "Student 59",
+    "schoolId": 6,
+    "legalguardianId": 2
+  },
+  {
+    "id": 60,
+    "name": "Student 60",
+    "schoolId": 5,
+    "legalguardianId": 6
+  },
+  {
+    "id": 61,
+    "name": "Student 61",
+    "schoolId": 4,
+    "legalguardianId": 5
+  },
+  {
+    "id": 62,
+    "name": "Student 62",
+    "schoolId": 1,
+    "legalguardianId": 6
+  },
+  {
+    "id": 63,
+    "name": "Student 63",
+    "schoolId": 9,
+    "legalguardianId": 10
+  },
+  {
+    "id": 64,
+    "name": "Student 64",
+    "schoolId": 1,
+    "legalguardianId": 2
+  },
+  {
+    "id": 65,
+    "name": "Student 65",
+    "schoolId": 4,
+    "legalguardianId": 6
+  },
+  {
+    "id": 66,
+    "name": "Student 66",
+    "schoolId": 8,
+    "legalguardianId": 8
+  },
+  {
+    "id": 67,
+    "name": "Student 67",
+    "schoolId": 1,
+    "legalguardianId": 2
+  },
+  {
+    "id": 68,
+    "name": "Student 68",
+    "schoolId": 4,
+    "legalguardianId": 9
+  },
+  {
+    "id": 69,
+    "name": "Student 69",
+    "schoolId": 8,
+    "legalguardianId": 2
+  },
+  {
+    "id": 70,
+    "name": "Student 70",
+    "schoolId": 6,
+    "legalguardianId": 1
+  },
+  {
+    "id": 71,
+    "name": "Student 71",
+    "schoolId": 4,
+    "legalguardianId": 7
+  },
+  {
+    "id": 72,
+    "name": "Student 72",
+    "schoolId": 10,
+    "legalguardianId": 4
+  },
+  {
+    "id": 73,
+    "name": "Student 73",
+    "schoolId": 9,
+    "legalguardianId": 6
+  },
+  {
+    "id": 74,
+    "name": "Student 74",
+    "schoolId": 4,
+    "legalguardianId": 5
+  },
+  {
+    "id": 75,
+    "name": "Student 75",
+    "schoolId": 4,
+    "legalguardianId": 5
+  },
+  {
+    "id": 76,
+    "name": "Student 76",
+    "schoolId": 7,
+    "legalguardianId": 6
+  },
+  {
+    "id": 77,
+    "name": "Student 77",
+    "schoolId": 6,
+    "legalguardianId": 10
+  },
+  {
+    "id": 78,
+    "name": "Student 78",
+    "schoolId": 6,
+    "legalguardianId": 10
+  },
+  {
+    "id": 79,
+    "name": "Student 79",
+    "schoolId": 9,
+    "legalguardianId": 4
+  },
+  {
+    "id": 80,
+    "name": "Student 80",
+    "schoolId": 6,
+    "legalguardianId": 7
+  },
+  {
+    "id": 81,
+    "name": "Student 81",
+    "schoolId": 3,
+    "legalguardianId": 7
+  },
+  {
+    "id": 82,
+    "name": "Student 82",
+    "schoolId": 3,
+    "legalguardianId": 1
+  },
+  {
+    "id": 83,
+    "name": "Student 83",
+    "schoolId": 7,
+    "legalguardianId": 1
+  },
+  {
+    "id": 84,
+    "name": "Student 84",
+    "schoolId": 6,
+    "legalguardianId": 3
+  },
+  {
+    "id": 85,
+    "name": "Student 85",
+    "schoolId": 6,
+    "legalguardianId": 6
+  },
+  {
+    "id": 86,
+    "name": "Student 86",
+    "schoolId": 10,
+    "legalguardianId": 8
+  },
+  {
+    "id": 87,
+    "name": "Student 87",
+    "schoolId": 4,
+    "legalguardianId": 2
+  },
+  {
+    "id": 88,
+    "name": "Student 88",
+    "schoolId": 5,
+    "legalguardianId": 2
+  },
+  {
+    "id": 89,
+    "name": "Student 89",
+    "schoolId": 9,
+    "legalguardianId": 4
+  },
+  {
+    "id": 90,
+    "name": "Student 90",
+    "schoolId": 10,
+    "legalguardianId": 8
+  },
+  {
+    "id": 91,
+    "name": "Student 91",
+    "schoolId": 6,
+    "legalguardianId": 1
+  },
+  {
+    "id": 92,
+    "name": "Student 92",
+    "schoolId": 2,
+    "legalguardianId": 10
+  },
+  {
+    "id": 93,
+    "name": "Student 93",
+    "schoolId": 9,
+    "legalguardianId": 3
+  },
+  {
+    "id": 94,
+    "name": "Student 94",
+    "schoolId": 4,
+    "legalguardianId": 1
+  },
+  {
+    "id": 95,
+    "name": "Student 95",
+    "schoolId": 3,
+    "legalguardianId": 7
+  },
+  {
+    "id": 96,
+    "name": "Student 96",
+    "schoolId": 7,
+    "legalguardianId": 7
+  },
+  {
+    "id": 97,
+    "name": "Student 97",
+    "schoolId": 10,
+    "legalguardianId": 1
+  },
+  {
+    "id": 98,
+    "name": "Student 98",
+    "schoolId": 6,
+    "legalguardianId": 4
+  },
+  {
+    "id": 99,
+    "name": "Student 99",
+    "schoolId": 9,
+    "legalguardianId": 10
+  },
+  {
+    "id": 100,
+    "name": "Student 100",
+    "schoolId": 7,
+    "legalguardianId": 4
+  }
+]
